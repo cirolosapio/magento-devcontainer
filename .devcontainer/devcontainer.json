@@ -1,0 +1,68 @@
+{
+    "dockerComposeFile": "compose.yml",
+    "workspaceFolder": "/var/www/html",
+    "service": "php",
+    "runServices": [
+        "nginx"
+    ],
+    "features": {
+        "ghcr.io/cirolosapio/devcontainers-features/alpine-starship:0": {},
+        "ghcr.io/cirolosapio/devcontainers-features/alpine-ohmyzsh:0": {},
+        "ghcr.io/cirolosapio/devcontainers-features/alpine-n98-magerun:0": {},
+        "ghcr.io/cirolosapio/devcontainers-features/alpine-bottom:0": {},
+        "ghcr.io/cirolosapio/devcontainers-features/alpine-docker:0": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "bmewburn.vscode-intelephense-client",
+                "eamodio.gitlens",
+                "junstyle.php-cs-fixer",
+                "mehedidracula.php-namespace-resolver",
+                "mikestead.dotenv",
+                "mechatroner.rainbow-csv",
+                "neilbrayfield.php-docblocker",
+                "oderwat.indent-rainbow",
+                "redhat.vscode-xml",
+                "usernamehw.errorlens",
+                "viperet.vscode-magento-wizard",
+                "xdebug.php-debug"
+            ],
+            "settings": {
+                "search.useIgnoreFiles": false,
+                "files.exclude": {
+                    // noise
+                    "app/etc/db_schema.xml": true,
+                    "app/etc/NonComposerComponentRegistration.php": true,
+                    "app/etc/registration_globlist.php": true,
+                    "app/etc/vendor_path.php": true,
+                    "app/autoload.php": true,
+                    "app/bootstrap.php": true,
+                    "vendor": true,
+                    "var": true,
+                    "**/.editorconfig": true,
+                    "**/.htaccess": true,
+                    "**/.htaccess.sample": true,
+                    "**/.user.ini": true,
+                    "**/CHANGELOG.md": true,
+                    "**/COPYING.txt": true,
+                    "**/Gruntfile.js.sample": true,
+                    "**/LICENSE.txt": true,
+                    "**/LICENSE_AFL.txt": true,
+                    "**/SECURITY.md": true,
+                    "**/auth.json.sample": true,
+                    "**/bin": true,
+                    "**/dev": true,
+                    "**/generated": true,
+                    "**/grunt-config.json.sample": true,
+                    "**/lib": true,
+                    "**/nginx.conf.sample": true,
+                    "**/package.json.sample": true,
+                    "**/phpserver": true,
+                    "**/pub": true,
+                    "**/setup": true
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "launch": {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "Listen for Xdebug",
+                "type": "php",
+                "request": "launch",
+                "port": 9003,
+                "hostname": "localhost",
+                "pathMappings": {
+                    "/var/www/html": "${workspaceFolder:root}"
+                }
+            },
+        ]
+    },
+    "tasks": {
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "label": "Monitor",
+                "type": "shell",
+                "command": "btm --mem_as_value",
+                "problemMatcher": [],
+                "icon": {
+                    "id": "vm",
+                    "color": "terminal.ansiGreen"
+                }
+            }
+        ]
+    },
+    "folders": [
+        {
+            "name": "root",
+            "path": "./",
+        },
+        {
+            "name": "vendor",
+            "path": "./vendor"
+        },
+        {
+            "name": "log",
+            "path": "./var/log"
+        },
+    ]
+}
