@@ -1,3 +1,5 @@
+name: magento_devcontainer
+
 services:
   nginx:
     image: nginx:alpine-slim
