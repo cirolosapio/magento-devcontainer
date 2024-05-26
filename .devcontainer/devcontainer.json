@@ -2,8 +2,12 @@
     "dockerComposeFile": "compose.yml",
     "workspaceFolder": "/var/www/html",
     "service": "php",
+    "containerUser": "vscode",
     "runServices": [
-        "nginx"
+        "nginx",
+        "redis",
+        "mariadb",
+        "opensearch"
     ],
     "portsAttributes": {
         "80": {
@@ -15,11 +19,13 @@
         80
     ],
     "features": {
-        "ghcr.io/cirolosapio/devcontainers-features/alpine-starship:0": {},
-        "ghcr.io/cirolosapio/devcontainers-features/alpine-ohmyzsh:0": {},
-        "ghcr.io/cirolosapio/devcontainers-features/alpine-n98-magerun:0": {},
-        "ghcr.io/cirolosapio/devcontainers-features/alpine-bottom:0": {},
-        "ghcr.io/cirolosapio/devcontainers-features/alpine-docker:0": {}
+        "ghcr.io/cirolosapio/devcontainers-features/alpine-user": {},
+        "ghcr.io/cirolosapio/devcontainers-features/alpine-starship": {},
+        "ghcr.io/cirolosapio/devcontainers-features/alpine-ohmyzsh": {},
+        "ghcr.io/cirolosapio/devcontainers-features/alpine-n98-magerun": {},
+        "ghcr.io/cirolosapio/devcontainers-features/alpine-php-composer": {},
+        "ghcr.io/cirolosapio/devcontainers-features/alpine-php-xdebug": {},
+        "ghcr.io/cirolosapio/devcontainers-features/alpine-docker": {}
     },
     "customizations": {
         "vscode": {
