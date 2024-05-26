@@ -1,7 +1,8 @@
-composer create-project --repository=https://repo.magento.com/ magento/project-community-edition=2.4.6 tmp
+composer create-project --repository=https://repo.magento.com/ magento/project-community-edition=2.4.7 tmp
 mv tmp/** ./
+mv tmp/.php-cs-fixer.dist.php ./
 
-m setup:install \
+bin/magento setup:install \
 --backend-frontname=admin \
 --base-url=https://magento246.localhost/ \
 --db-host=mariadb \
@@ -17,7 +18,6 @@ m setup:install \
 --use-rewrites=1 \
 --cleanup-database \
 --search-engine=opensearch \
---opensearch-host=opensearch \
---opensearch-port=9200
+--opensearch-host=opensearch
 
-m deploy:mode:set developer
+bin/magento deploy:mode:set developer

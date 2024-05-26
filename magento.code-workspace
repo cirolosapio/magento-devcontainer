@@ -42,5 +42,39 @@
             "name": "log",
             "path": "./var/log"
         },
-    ]
+    ],
+    "settings": {
+        "search.useIgnoreFiles": false,
+        "files.exclude": {
+            // noise
+            "**/.editorconfig": true,
+            "**/.htaccess.sample": true,
+            "**/.htaccess": true,
+            "**/.user.ini": true,
+            "**/auth.json.sample": true,
+            "**/bin": true,
+            "**/CHANGELOG.md": true,
+            "**/COPYING.txt": true,
+            "**/dev": true,
+            "**/grunt-config.json.sample": true,
+            "**/Gruntfile.js.sample": true,
+            "**/lib": true,
+            "**/LICENSE_AFL.txt": true,
+            "**/LICENSE.txt": true,
+            "**/nginx.conf.sample": true,
+            "**/package.json.sample": true,
+            "**/phpserver": true,
+            "**/pub": true,
+            "**/SECURITY.md": true,
+            "**/setup": true,
+            "app/autoload.php": true,
+            "app/bootstrap.php": true,
+            "app/etc/db_schema.xml": true,
+            "app/etc/NonComposerComponentRegistration.php": true,
+            "app/etc/registration_globlist.php": true,
+            "app/etc/vendor_path.php": true,
+            "var": true,
+            "vendor": true,
+        }
+    }
 }
