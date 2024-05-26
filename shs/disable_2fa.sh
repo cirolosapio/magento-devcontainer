@@ -1,4 +1,3 @@
-composer r markshust/magento2-module-disabletwofactorauth
-m module:enable MarkShust_DisableTwoFactorAuth
-m config:set twofactorauth/general/enable 0
-sup
+bin/magento module:disable Magento_AdminAdobeImsTwoFactorAuth
+bin/magento module:disable Magento_TwoFactorAuth
+bin/magento setup:upgrade
