@@ -58,6 +58,7 @@
 1. in the WSL Terminal, navigate to the project folder using the command `cd /path/to/project`
 2. `cd .devcontainer/certs`
 3. `mkcert <domain>.localhost`
+4. update the `nginx.conf` file with the new domain
 
 ## Install php dependencies
 
