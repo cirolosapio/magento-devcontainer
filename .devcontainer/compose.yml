@@ -12,7 +12,7 @@ services:
       - ./certs:/etc/nginx/certs:ro
 
   php:
-    image: cirolosapio/php-fpm:8.2.19-magento
+    image: cirolosapio/php-fpm:8.2-magento
     volumes:
       - ..:/var/www/html:cached
       - ~/.composer:/home/vscode/.composer:rw
