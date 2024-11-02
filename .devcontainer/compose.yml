@@ -27,8 +27,7 @@ services:
     environment:
       MARIADB_ROOT_PASSWORD: magento
       MARIADB_DATABASE: magento
-    volumes:
-      - mariadb:/var/lib/mysql:rw
+    volumes: [ mariadb:/var/lib/mysql:rw ]
 
   opensearch:
     build:
@@ -37,11 +36,10 @@ services:
       discovery.type: single-node
       DISABLE_SECURITY_PLUGIN: true
       # OPENSEARCH_JAVA_OPTS: -Xms512m -Xmx512m
-    volumes:
-      - os:/usr/share/opensearch/data:rw
+    volumes: [ os:/usr/share/opensearch/data:rw ]
 
   redis:
-    image: redis:7.2.4-alpine3.19
+    image: redis:alpine
     volumes: [ redis:/data:rw ]
 
 volumes:
